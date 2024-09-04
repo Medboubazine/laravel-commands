@@ -3,7 +3,7 @@
 namespace Medboubazine\LaravelCommands;
 
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
-use Medboubazine\LaravelCommands\Commands\DumpCommand;
+use Medboubazine\LaravelCommands\Commands\AnalyzeCommand;
 
 final class ServiceProvider extends IlluminateServiceProvider
 {
@@ -17,7 +17,7 @@ final class ServiceProvider extends IlluminateServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands(
                 commands: [
-                    DumpCommand::class,
+                    AnalyzeCommand::class,
                 ],
             );
         }
