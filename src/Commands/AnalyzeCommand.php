@@ -44,6 +44,8 @@ final class AnalyzeCommand extends Command
                 $send_data_request->handle($server_url, $form_params);
             }
         }
+
+        $this->components->info("Analyze completed");
     }
     /**
      * Get form params

@@ -23,8 +23,8 @@ trait GuzzleHttpRequest
         ///
         /// Request Configurations
         ///
-        $headers = array_merge($headers, $options['headers'] ?? []);
-        if ($options['headers']) {
+        if (isset($options['headers'])) {
+            $headers = array_merge($headers, $options['headers']);
             unset($options['headers']);
         }
         $options = [
