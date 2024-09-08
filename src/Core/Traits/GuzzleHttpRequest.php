@@ -3,7 +3,6 @@
 namespace Medboubazine\LaravelCommands\Core\Traits;
 
 use GuzzleHttp\Client;
-use Illuminate\Support\Arr;
 use Psr\Http\Message\ResponseInterface;
 
 trait GuzzleHttpRequest
@@ -33,6 +32,7 @@ trait GuzzleHttpRequest
             "http_errors" => false,
             "verify" => false,
             "headers" => $headers,
+            ...$options,
         ];
         ///
         /// Response
